@@ -30,6 +30,7 @@ public class C01_Locators {
         driver.close();
 */
 
+        /*
         // 2. YOL -WebElement kutusuna koymadan
         //Amazon sayfasına gidiniz
         driver.get("https://amazon.com");
@@ -39,7 +40,7 @@ public class C01_Locators {
 
         //sayfayı kapatınız
         driver.close();
-
+          */
 /*
 Locate ettiğimiz WebElement <input> tagına sahipse, o WebElement'e sendKeys mehtodu ile istediğimiz texti gönderebiliriz.
 Eğer bir arama kutusunu locate edip text gönderirsek bunu iki şekilde enter yaptırabiliriz.
@@ -47,6 +48,12 @@ Eğer bir arama kutusunu locate edip text gönderirsek bunu iki şekilde enter y
 2) Keys.ENTER
  */
 
+//3. YOL Name ile alma
+        driver.get("https://amazon.com");
+        WebElement name = driver.findElement(By.name("field-keywords"));
+        name.sendKeys("iphone");
+        name.submit();
+        driver.close();
 
     }
 }
